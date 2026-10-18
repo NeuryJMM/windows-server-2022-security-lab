@@ -20,7 +20,6 @@ El laboratorio comienza con la implementación de un dominio mediante Active Dir
 
 Cada práctica se documenta en su propia carpeta con el procedimiento paso a paso, las capturas de evidencia y las conclusiones técnicas.
 
-**Estado del proyecto: en progreso.** Las prácticas se van agregando a medida que se completan y documentan.
 
 ---
 
