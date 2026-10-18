@@ -1,10 +1,10 @@
 [← Volver al laboratorio](../README.md)
 
-# 06 · Cifrado con BitLocker
+# 06 · Evaluación de vulnerabilidades con Nessus
 
 ![Estado](https://img.shields.io/badge/Estado-En%20documentación-fbbf24?style=flat-square)
 
-Cifrado de unidades con **BitLocker** en el servidor y en el equipo cliente.
+Escaneo de vulnerabilidades con **Nessus** y análisis de los hallazgos obtenidos.
 
 ## Objetivo
 
@@ -29,6 +29,11 @@ Cifrado de unidades con **BitLocker** en el servidor y en el equipo cliente.
 
 ## Conclusiones
 
+<!-- Qué funcionó, qué falló y por qué -->
+
+---
+
+[← Volver al laboratorio](../README.md)
 <!-- Qué funcionó, qué falló y por qué -->
 
 ---
