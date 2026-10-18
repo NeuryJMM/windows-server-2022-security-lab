@@ -75,20 +75,16 @@ Windows Server 2022 Security Lab reúne el trabajo práctico realizado sobre adm
 
 La documentación registra las configuraciones aplicadas, las herramientas utilizadas, las decisiones técnicas y las evidencias obtenidas. El resultado es un repositorio de referencia para revisar los procedimientos realizados y demostrar experiencia práctica con tecnologías de infraestructura Windows y seguridad de sistemas.
 
----
-
-## Licencia
-
-Este proyecto se distribuye bajo la [licencia MIT](./LICENSE).
 
 ---
 
 ## 👨‍💻 Autor
 
 **Neury Jorge Montero Mejía**
+
 *Estudiante de Tecnólogo en Seguridad Informática*
 
-[![LinkedIn](https://img.shields.io/badge/LINKEDIN-NEURY%20MONTERO-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/TU-USUARIO)
+[![LinkedIn](https://img.shields.io/badge/LINKEDIN-NEURY%20MONTERO-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/neuryjmm)
 [![GitHub](https://img.shields.io/badge/GITHUB-NEURYJMM-111111?style=flat-square&logo=github&logoColor=white)](https://github.com/NeuryJMM)
 
 ---
