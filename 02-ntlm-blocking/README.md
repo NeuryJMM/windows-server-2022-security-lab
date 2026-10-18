@@ -1,6 +1,6 @@
 [← Volver al laboratorio](../README.md)
 
-# 02 · DNSSEC
+# 02 · Bloqueo de NTLM
 
 ![Estado](https://img.shields.io/badge/Estado-En%20documentación-fbbf24?style=flat-square)
 
