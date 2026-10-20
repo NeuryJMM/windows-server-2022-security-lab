@@ -259,7 +259,13 @@ Resolve-DnsName -Name Neury0829.local -Type DNSKEY -Server 192.168.0.10 -DnssecO
 ```cmd
 gpresult /r /scope computer
 ```
+## Demostración en video
 
+Esta práctica cuenta con una demostración en video donde se muestra el proceso completo en el laboratorio. Las capturas del procedimiento se encuentran en la carpeta `images/`.
+
+**Video de la práctica:** [Ver demostración en YouTube](https://www.youtube.com/watch?v=o90UTrWutsA&list=PLIJEt4hLYnOWJKyI5tN9mMGqavT7k_wY3)
+
+---
 ## Solución de problemas frecuentes
 
 | Problema | Causa probable | Solución |
