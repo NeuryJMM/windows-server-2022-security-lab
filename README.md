@@ -4,7 +4,7 @@
 
 ![Windows Server](https://img.shields.io/badge/WINDOWS%20SERVER-2022-c084fc?style=flat-square&logo=windows&logoColor=white)
 ![Active Directory](https://img.shields.io/badge/ACTIVE%20DIRECTORY-AD%20DS-f472b6?style=flat-square)
-![Security](https://img.shields.io/badge/SECURITY-NTLM%20%7C%20DNSSEC%20%7C%20LAPS%20%7C%20NESSUS-60a5fa?style=flat-square)
+![Security](https://img.shields.io/badge/SECURITY-BITLOCKER%20%7C%20NTLM%20%7C%20DNSSEC%20%7C%20LAPS%20%7C%20NESSUS-60a5fa?style=flat-square)
 ![Infrastructure](https://img.shields.io/badge/INFRASTRUCTURE-ENTERPRISE-8b5cf6?style=flat-square)
 ![Estado](https://img.shields.io/badge/ESTADO-EN%20PROGRESO-fbbf24?style=flat-square)
 
@@ -16,7 +16,7 @@
 
 **Windows Server 2022 Security Lab** es un laboratorio práctico de administración de sistemas, infraestructura y seguridad informática. El proyecto reúne la implementación, configuración y validación de servicios de Windows Server 2022, junto con prácticas de endurecimiento (*hardening*), protección de credenciales y cifrado de datos.
 
-El laboratorio comienza con la implementación de un dominio mediante Active Directory Domain Services (AD DS) y la unión de un cliente Windows al dominio. A partir de esa base, evoluciona hacia controles de seguridad como la restricción de NTLM, la protección de credenciales con Credential Guard, DNSSEC y la administración de contraseñas locales con LAPS, y cierra con una evaluación de vulnerabilidades con Nessus.
+El laboratorio comienza con la implementación de un dominio mediante Active Directory Domain Services (AD DS) y la unión de un cliente Windows al dominio. A partir de esa base, evoluciona hacia controles de seguridad como el cifrado con BitLocker y la restricción de NTLM mediante directivas de grupo, la protección de credenciales con Credential Guard, DNSSEC y LAPS, y cierra con una evaluación de vulnerabilidades con Nessus.
 
 Cada práctica se documenta en su propia carpeta con el procedimiento paso a paso, las capturas de evidencia y las conclusiones técnicas.
 
@@ -28,7 +28,7 @@ Cada práctica se documenta en su propia carpeta con el procedimiento paso a pas
 | # | Práctica | Tecnologías y alcance |
 |:--:|---|---|
 | 01 | [Active Directory Domain Services](./01-active-directory) | Windows Server 2022, AD DS, DNS, controlador de dominio, bosque y unión de un cliente Windows 10 al dominio. |
-| 02 | [Bloqueo de NTLM](./02-ntlm-blocking) | Restricción del protocolo de autenticación NTLM en el dominio. |
+| 02 | [GPO: BitLocker y bloqueo de NTLM](./02-gpo-bitlocker-ntlm) | Cifrado de unidades con BitLocker desplegado por GPO (inicio con PIN y recuperación en Active Directory) y bloqueo de NTLM en el dominio mediante GPO. |
 | 03 | [Credential Guard y bloqueo de USB](./03-credential-guard-block-usb) | Protección de credenciales y restricción de dispositivos de almacenamiento USB. |
 | 04 | [DNSSEC](./04-dnssec) | Seguridad del servicio DNS mediante DNSSEC. |
 | 05 | [LAPS y Visor de Eventos](./05-laps-event-viewer) | Administración de contraseñas del administrador local y revisión de eventos de seguridad. |
@@ -55,7 +55,7 @@ Cada práctica se documenta en su propia carpeta con el procedimiento paso a pas
 ```text
 windows-server-2022-security-lab/
 ├── 01-active-directory/
-├── 02-ntlm-blocking/
+├── 02-gpo-bitlocker-ntlm/
 ├── 03-credential-guard-block-usb/
 ├── 04-dnssec/
 ├── 05-laps-event-viewer/
