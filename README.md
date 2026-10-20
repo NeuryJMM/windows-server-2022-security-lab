@@ -36,6 +36,26 @@ Cada práctica se documenta en su propia carpeta con el procedimiento paso a pas
 
 ---
 
+---
+
+## Demostraciones y evidencias
+
+Los siguientes enlaces permiten acceder directamente a las demostraciones en video de las prácticas disponibles.
+
+| Práctica | Laboratorio | Demostración |
+|---|---|---|
+| 01 · Active Directory | Lab A: Instalación de Windows Server 2022 | [Ver en YouTube](https://www.youtube.com/watch?v=4aqgDtxuHpw&list=PLIJEt4hLYnOWqOb7Y7uE-x2Y58xE4Wx_M&index=3) |
+| 01 · Active Directory | Lab B: Instalación y configuración de Active Directory | [Ver en YouTube](https://www.youtube.com/watch?v=Zir3aKPCbaA&list=PLIJEt4hLYnOWqOb7Y7uE-x2Y58xE4Wx_M&index=2) |
+| 01 · Active Directory | Lab C: Enrolamiento a dominio de AD de VM Windows 10 Pro | [Ver en YouTube](https://www.youtube.com/watch?v=K6fxlcUOUbM&list=PLIJEt4hLYnOWqOb7Y7uE-x2Y58xE4Wx_M) |
+| 02 · BitLocker y NTLM | Lab A: Encriptación BitLocker a PC Servidor y Cliente | [Ver en YouTube](https://www.youtube.com/watch?v=8xpXIuTNkMI&list=PLIJEt4hLYnOXZ0OMxdSOniMKmFHBGUE2C&index=2) |
+| 02 · BitLocker y NTLM | Lab B: Bloqueo NTLM | [Ver en YouTube](https://www.youtube.com/watch?v=m5s5XDsmdXI&list=PLIJEt4hLYnOXZ0OMxdSOniMKmFHBGUE2C&index=1) |
+| 03 · Credential Guard y bloqueo de USB | Credential Guard / Block USB | [Ver en YouTube](https://www.youtube.com/watch?v=GYoR0E_iIXg&list=PLIJEt4hLYnOUS5kLkN072JUDEyQ6au6Ma) |
+| 04 · DNSSEC | DNSSEC | [Ver en YouTube](https://www.youtube.com/watch?v=o90UTrWutsA&list=PLIJEt4hLYnOWJKyI5tN9mMGqavT7k_wY3) |
+| 05 · LAPS y Visor de Eventos | LAPS y Visor de Eventos | [Ver en YouTube](https://www.youtube.com/watch?v=rLxAmrR10vI&list=PLIJEt4hLYnOVVYlsAteeUG1azNsHhnQrb) |
+| 06 · Nessus | Nessus | [Ver en YouTube](https://www.youtube.com/watch?v=RSNTT5_cnQs&list=PLIJEt4hLYnOVbX6VlRxzeMk5U_s4Q92fj) |
+
+Las prácticas incluyen, según corresponda, procedimientos paso a paso, comandos, capturas de pantalla, verificación de resultados y solución de problemas.
+
 ## Entorno del laboratorio
 
 | Elemento | Valor |
