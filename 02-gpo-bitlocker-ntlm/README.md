@@ -346,7 +346,17 @@ Get-BitLockerVolume
 **Clave de recuperación en Active Directory:** en *Usuarios y equipos de Active Directory*, abre el objeto del equipo cifrado y revisa su pestaña de recuperación de BitLocker (disponible gracias al visor de contraseñas de recuperación instalado en el paso 3).
 
 **Auditoría de NTLM:** en el Visor de eventos, revisa *Registros de aplicaciones y servicios → Microsoft → Windows → NTLM → Operational*.
+## Demostración en video
 
+Esta práctica cuenta con demostraciones en video donde se muestra el proceso completo en el laboratorio. Las capturas del procedimiento se encuentran en la carpeta `images/`.
+
+| Parte del How-To | Laboratorio | Video |
+|:--:|---|---|
+| A | Lab A: Instalación de Windows Server 2022 | [Ver en YouTube](https://www.youtube.com/watch?v=4aqgDtxuHpw&list=PLIJEt4hLYnOWqOb7Y7uE-x2Y58xE4Wx_M&index=3) |
+| B | Lab B: Instalación y configuración de Active Directory | [Ver en YouTube](https://www.youtube.com/watch?v=Zir3aKPCbaA&list=PLIJEt4hLYnOWqOb7Y7uE-x2Y58xE4Wx_M&index=2) |
+| C | Lab C: Enrolamiento a dominio de AD de VM Windows 10 Pro | [Ver en YouTube](https://www.youtube.com/watch?v=K6fxlcUOUbM&list=PLIJEt4hLYnOWqOb7Y7uE-x2Y58xE4Wx_M) |
+
+---
 ## Solución de problemas frecuentes
 
 | Problema | Causa probable | Solución |
