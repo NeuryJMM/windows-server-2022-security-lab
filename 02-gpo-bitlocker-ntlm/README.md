@@ -352,9 +352,8 @@ Esta práctica cuenta con demostraciones en video donde se muestra el proceso co
 
 | Parte del How-To | Laboratorio | Video |
 |:--:|---|---|
-| A | Lab A: Instalación de Windows Server 2022 | [Ver en YouTube](https://www.youtube.com/watch?v=4aqgDtxuHpw&list=PLIJEt4hLYnOWqOb7Y7uE-x2Y58xE4Wx_M&index=3) |
-| B | Lab B: Instalación y configuración de Active Directory | [Ver en YouTube](https://www.youtube.com/watch?v=Zir3aKPCbaA&list=PLIJEt4hLYnOWqOb7Y7uE-x2Y58xE4Wx_M&index=2) |
-| C | Lab C: Enrolamiento a dominio de AD de VM Windows 10 Pro | [Ver en YouTube](https://www.youtube.com/watch?v=K6fxlcUOUbM&list=PLIJEt4hLYnOWqOb7Y7uE-x2Y58xE4Wx_M) |
+| A | Lab A: Encriptación BitLocker a PC Servidor y Cliente | [Ver en YouTube](https://www.youtube.com/watch?v=8xpXIuTNkMI&list=PLIJEt4hLYnOXZ0OMxdSOniMKmFHBGUE2C&index=2) |
+| B | Lab B: Bloqueo NTLM | [Ver en YouTube](https://www.youtube.com/watch?v=m5s5XDsmdXI&list=PLIJEt4hLYnOXZ0OMxdSOniMKmFHBGUE2C&index=1) |
 
 ---
 ## Solución de problemas frecuentes
