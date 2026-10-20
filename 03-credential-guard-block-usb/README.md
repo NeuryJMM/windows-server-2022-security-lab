@@ -234,7 +234,13 @@ Get-CimInstance -ClassName Win32_DeviceGuard -Namespace root\Microsoft\Windows\D
 También puedes abrir `msinfo32` y revisar *Servicios de seguridad basados en la virtualización en ejecución*.
 
 **Bloqueo de USB:** en VMware, conecta una unidad USB a la máquina virtual (*VM → Removable Devices*) y comprueba que el acceso a la unidad sea denegado en el cliente.
+## Demostración en video
 
+Esta práctica cuenta con una demostración en video donde se muestra el proceso completo en el laboratorio. Las capturas del procedimiento se encuentran en la carpeta `images/`.
+
+**Video de la práctica:** [Ver demostración en YouTube](https://www.youtube.com/watch?v=GYoR0E_iIXg&list=PLIJEt4hLYnOUS5kLkN072JUDEyQ6au6Ma)
+
+---
 ## Solución de problemas frecuentes
 
 | Problema | Causa probable | Solución |
