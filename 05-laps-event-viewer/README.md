@@ -8,7 +8,7 @@ Antes de configurar las políticas, Active Directory necesita los campos para al
 2. Importa el módulo de administración: `Import-Module AdmPwd.PS`
 3. Extiende el esquema ejecutando: `Update-AdmPwdADSchema`
 
-![Extensión del esquema de AD](images/fase1_esquema.png)
+![Extensión del esquema de AD](images/step_01.jpg)
 
 ## Fase 2: Configuración de Permisos
 Los equipos necesitan autorización para escribir su propia contraseña en el esquema.
