@@ -241,6 +241,13 @@ Esta práctica cuenta con una demostración en video donde se muestra el proceso
 **Video de la práctica:** [Ver demostración en YouTube](https://www.youtube.com/watch?v=GYoR0E_iIXg&list=PLIJEt4hLYnOUS5kLkN072JUDEyQ6au6Ma)
 
 ---
+## Lo aprendido
+
+Esta práctica permitió trabajar la organización del dominio mediante unidades organizativas y el despliegue de GPO enfocadas en la protección de credenciales y el control de dispositivos extraíbles.
+
+Se comprendió la diferencia entre vincular una GPO al dominio completo o a una OU específica, y que una directiva solo aplica a los equipos que estén dentro de ella. También se aprendió a interpretar el resultado de `Win32_DeviceGuard`: distinguir las capacidades de hardware (`AvailableSecurityProperties`) del estado real de los servicios de seguridad (`SecurityServicesConfigured` y `SecurityServicesRunning`), y que el bloqueo UEFI no se revierte quitando la GPO.
+
+---
 ## Solución de problemas frecuentes
 
 | Problema | Causa probable | Solución |
