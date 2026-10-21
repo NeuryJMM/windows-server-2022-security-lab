@@ -356,6 +356,13 @@ Esta práctica cuenta con demostraciones en video donde se muestra el proceso co
 | B | Lab B: Bloqueo NTLM | [Ver en YouTube](https://www.youtube.com/watch?v=m5s5XDsmdXI&list=PLIJEt4hLYnOXZ0OMxdSOniMKmFHBGUE2C&index=1) |
 
 ---
+## Lo aprendido
+
+Esta práctica permitió trabajar el despliegue de controles de seguridad mediante directivas de grupo: cifrado con BitLocker con autenticación por PIN y copia de las claves de recuperación en Active Directory, y restricción del protocolo NTLM en el dominio.
+
+Se comprendió la importancia de auditar antes de bloquear: la auditoría de NTLM permite ver qué servicios todavía lo usan antes de denegarlo, evitando interrumpir aplicaciones. También se reforzó que las claves de recuperación de BitLocker deben custodiarse en un repositorio seguro, como Active Directory, y no en el mismo equipo cifrado.
+
+---
 ## Solución de problemas frecuentes
 
 | Problema | Causa probable | Solución |
