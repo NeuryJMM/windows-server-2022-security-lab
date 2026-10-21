@@ -261,9 +261,9 @@ gpresult /r /scope computer
 ```
 ## Lo aprendido
 
-Esta práctica permitió trabajar los fundamentos necesarios para construir una infraestructura basada en Active Directory: instalación de Windows Server 2022 en un hipervisor, creación de un dominio y unión de un cliente Windows 10 al dominio.
+Esta práctica permitió trabajar la protección del servicio DNS mediante DNSSEC: firma de una zona integrada en Active Directory, configuración de las claves KSK y ZSK, y propagación de la validación a los clientes mediante la tabla de directivas de resolución de nombres (NRPT).
 
-Durante el proceso se identificaron puntos críticos que conviene cuidar: eliminar el dispositivo Floppy de Easy Install para evitar errores de instalación, presionar una tecla a tiempo para arrancar desde la ISO, y configurar el DNS del cliente con la IP del controlador de dominio para que pueda resolver y unirse al dominio. También se comprendió la diferencia entre almacenar el disco virtual en un solo archivo o en varios, y por qué se recomienda asignar una IP estática a un controlador de dominio.
+Se comprendió que firmar la zona en el servidor no basta: los clientes deben estar configurados para exigir la validación mediante una GPO, y la regla NRPT debe agregarse con **Crear** y guardarse con **Aplicar**. También se aprendió la función de cada clave (la KSK firma las claves; la ZSK firma los registros de la zona) y cómo verificar la zona firmada con `Get-DnsServerZone` y los registros DNSKEY y RRSIG.
 
 ---
 ## Demostración en video
