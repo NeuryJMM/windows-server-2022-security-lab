@@ -262,7 +262,7 @@ Al finalizar la práctica, vuelve a dejar el servidor protegido:
 3. Volver a ejecutar un escaneo para comprobar el estado final.
 
 ---
-- ## Solución de problemas frecuentes
+## Solución de problemas frecuentes
 
 | Problema | Causa probable | Solución |
 |---|---|---|
