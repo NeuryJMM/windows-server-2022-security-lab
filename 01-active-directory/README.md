@@ -443,6 +443,13 @@ Esta práctica cuenta con demostraciones en video donde se muestra el proceso co
 | C | Lab C: Enrolamiento a dominio de AD de VM Windows 10 Pro | [Ver en YouTube](https://www.youtube.com/watch?v=K6fxlcUOUbM&list=PLIJEt4hLYnOWqOb7Y7uE-x2Y58xE4Wx_M) |
 
 ---
+## Lo aprendido
+
+Esta práctica permitió trabajar los fundamentos necesarios para construir una infraestructura basada en Active Directory: instalación de Windows Server 2022 en un hipervisor, creación de un dominio y unión de un cliente Windows 10 al dominio.
+
+Durante el proceso se identificaron puntos críticos que conviene cuidar: eliminar el dispositivo Floppy de Easy Install para evitar errores de instalación, presionar una tecla a tiempo para arrancar desde la ISO, y configurar el DNS del cliente con la IP del controlador de dominio para que pueda resolver y unirse al dominio. También se comprendió la diferencia entre almacenar el disco virtual en un solo archivo o en varios, y por qué se recomienda asignar una IP estática a un controlador de dominio.
+
+---
 
 ## Solución de problemas frecuentes
 
