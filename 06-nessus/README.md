@@ -41,6 +41,7 @@ Sexta práctica del laboratorio. Se instala **Nessus**, se crean condiciones de 
 - [Partes D y E: Analizar y remediar](#partes-d-y-e-analizar-los-resultados-y-aplicar-soluciones)
 - [Parte F: Segundo escaneo y comparación](#parte-f-segundo-escaneo-y-comparación)
 - [Restaurar la configuración de seguridad](#restaurar-la-configuración-de-seguridad)
+- [Solución de problemas](#solución-de-problemas-frecuentes)
 - [Lo aprendido](#lo-aprendido)
 
 ---
@@ -261,7 +262,6 @@ Al finalizar la práctica, vuelve a dejar el servidor protegido:
 3. Volver a ejecutar un escaneo para comprobar el estado final.
 
 ---
-- [Solución de problemas](#solución-de-problemas-frecuentes)
 - ## Solución de problemas frecuentes
 
 | Problema | Causa probable | Solución |
