@@ -282,6 +282,13 @@ También permitió identificar qué pasos son necesarios para que LAPS funcione 
 
 Por otro lado, el uso del Visor de eventos permitió reconocer eventos clave de auditoría: quién apagó el equipo (1074), cuándo inició el servicio de registro (6005), los inicios de sesión correctos (4624) y fallidos (4625), y los cambios en la política de auditoría (4719). Un resultado vacío, como el del evento 4719, también es información útil: confirma que esa política no fue modificada.
 
+## Demostración en video
+
+Esta práctica cuenta con una demostración en video donde se muestra el proceso completo en el laboratorio. Las capturas del procedimiento se encuentran en la carpeta `images/`.
+
+**Video de la práctica:** [Ver demostración en YouTube](https://www.youtube.com/watch?v=rLxAmrR10vI)
+
+---
 ## Solución de problemas frecuentes
 
 | Problema | Causa probable | Solución |
