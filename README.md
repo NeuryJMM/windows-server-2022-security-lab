@@ -6,7 +6,7 @@
 ![Active Directory](https://img.shields.io/badge/ACTIVE%20DIRECTORY-AD%20DS-f472b6?style=flat-square)
 ![Security](https://img.shields.io/badge/SECURITY-BITLOCKER%20%7C%20NTLM%20%7C%20DNSSEC%20%7C%20LAPS%20%7C%20NESSUS-60a5fa?style=flat-square)
 ![Infrastructure](https://img.shields.io/badge/INFRASTRUCTURE-ENTERPRISE-8b5cf6?style=flat-square)
-![Estado](https://img.shields.io/badge/ESTADO-EN%20PROGRESO-fbbf24?style=flat-square)
+![Estado](https://img.shields.io/badge/ESTADO-EN%20COMPLETADO-fbbf24?style=flat-square)
 
 </div>
 
