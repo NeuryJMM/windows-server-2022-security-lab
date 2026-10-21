@@ -1,65 +1,41 @@
-# 05 - Local Administrator Password Solution (LAPS) & Event Viewer
+# Práctica 5: Implementación de LAPS y Auditoría con Visor de Eventos
 
-Esta práctica documenta la implementación de LAPS para la gestión de contraseñas de administradores locales y la auditoría de eventos del sistema y seguridad en Windows Server 2022.
+La implementación de Local Administrator Password Solution (LAPS) es un control de ciberseguridad fundamental para evitar ataques de movimiento lateral (Pass-the-Hash), garantizando que las cuentas de administrador local de cada equipo tengan contraseñas únicas, complejas y rotativas de forma automática.
 
-## A. Habilitar LAPS para la modificación de contraseñas de usuarios locales
+## Fase 1: Extensión del Esquema de Active Directory
+Antes de configurar las políticas, Active Directory necesita los campos para almacenar las contraseñas.
+1. Abre **PowerShell** como Administrador en tu Controlador de Dominio.
+2. Importa el módulo de administración: `Import-Module AdmPwd.PS`
+3. Extiende el esquema ejecutando: `Update-AdmPwdADSchema`
 
-1. Sitúate en el Escritorio luego de haber descargado previamente el archivo `LAPS.x64` desde la página oficial de Microsoft.
-   ![Descarga de LAPS](./images/step_02.jpg)
-2. Haz doble clic en el archivo para abrir el asistente de instalación.
-   ![Asistente de instalación LAPS](./images/step_03.jpg)
-3. Haz clic en **Next** hasta llegar a la ventana de **Custom Setup**.
-   ![Custom Setup LAPS](./images/step_04.jpg)
-4. Configura cada uno de los parámetros (como *AdmPwd GPO Extension* y *Management Tools*) para que se instalen en el disco local. Para ello, haz clic en el icono de la "X" y cámbialo por **"Will be installed on local hard drive"**.
-   ![Configuración de disco](./images/step_06.jpg)
-5. Haz clic en **Next** para aplicar las configuraciones y luego en **Finish** para completar la instalación.
-   ![Instalación Finalizada](./images/step_08.jpg)
+![Extensión del esquema de AD](images/fase1_esquema.png)
 
-## B. Instalar y configurar LAPS mediante GPO
+## Fase 2: Configuración de Permisos
+Los equipos necesitan autorización para escribir su propia contraseña en el esquema.
+1. Otorga el permiso de autoescritura a los equipos apuntando a su Unidad Organizativa (OU):
+   `Set-AdmPwdComputerSelfPermission -OrgUnit "OU=TusEquipos,DC=tudominio,DC=local"`
+2. Otorga permisos de lectura únicamente a los administradores autorizados.
 
-1. Dirígete al **Administrador del servidor**.
-   ![Administrador del servidor](./images/step_10.jpg)
-2. Haz clic en **Herramientas** y selecciona **Administración de directivas de grupo**.
-   ![Directivas de grupo](./images/step_11.png)
-3. Crea un GPO en el dominio y vincúlalo a la unidad organizativa correspondiente (por ejemplo, "Empresas").
-   ![Vincular GPO](./images/step_12.jpg)
-4. Establece el nombre de la directiva como **"LAPS"** y haz clic en **Aceptar**.
-   ![Nombre GPO](./images/step_13.jpg)
-5. Haz clic derecho sobre la GPO recién creada y selecciona **Editar**.
-   ![Editar GPO](./images/step_14.jpg)
+![Configuración de Permisos](images/fase2_permisos.png)
 
-## C. Garantizar contraseñas con un mínimo de 16 caracteres
+## Fase 3: Configuración de la GPO (Directiva de Grupo)
+1. Abre la **Administración de directivas de grupo (gpmc.msc)**.
+2. Crea una GPO llamada "Politica_LAPS" y vincúlala a la OU.
+3. Edita la GPO en: `Configuración del equipo > Directivas > Plantillas administrativas > LAPS`.
+4. Habilita **Enable local admin password management**.
+5. Configura **Password Settings**.
 
-1. En el **Editor de administración de directivas de grupo**, dirígete a `Configuración del equipo` > `Directivas` > `Plantillas administrativas` > `LAPS`.
-   ![Ruta LAPS](./images/step_16.jpg)
-2. Haz doble clic en la opción **Password Settings**.
-   ![Password Settings](./images/step_17.jpg)
-3. Habilita la regla, deja la complejidad de la contraseña por defecto y cambia la longitud mínima (*Password Length*) de 14 a **16**. Haz clic en Aplicar y Aceptar.
-   ![Configurar longitud](./images/step_18.jpg)
-4. Abre la directiva **Do not allow password expiration time longer than required by policy** y márcala como **Habilitada**. 
-   * *Nota:* Esta opción impide que una contraseña exceda su tiempo límite, forzando el cambio inmediato cuando llega su tiempo de finalización.
-   ![Expiración de contraseña](./images/step_19.jpg)
-5. Haz clic en Aplicar y Aceptar.
+![Configuración GPO](images/fase3_gpo.png)
 
-## D. Búsqueda y análisis en el Visor de eventos
+## Fase 4: Despliegue en el Cliente y Auditoría en el Visor de Eventos
+1. Instala el paquete cliente de LAPS en la máquina cliente.
+2. Actualiza políticas: `gpupdate /force`
+3. Abre el **Visor de Eventos** (`eventvwr.msc`).
+4. Navega a `Registros de aplicaciones y servicios > LAPS`.
 
-Para abrir el visor de eventos, utiliza el buscador de Windows o presiona `Win + R` y ejecuta el comando `eventvwr.msc`.
-![Visor de eventos](./images/step_20.png)
+![Visor de Eventos LAPS](images/fase4_eventos.png)
 
-### Registros de Windows: Sistema
-Navega a `Registros de Windows` > `Sistema`. En el panel de Acciones, selecciona **Filtrar registro actual...** para buscar los siguientes identificadores:
+## Verificación Final
+Verifica el atributo `ms-Mcs-AdmPwd` en el Editor de atributos de las propiedades del equipo en AD.
 
-* **Event ID 1074:** Este evento muestra los detalles de qué usuario decidió apagar el equipo.
-  ![Filtro 1074](./images/step_21.jpg)
-* **Event ID 6005:** Este evento sirve para ver los registros de inicios del servicio de Registro de eventos.
-  ![Filtro 6005](./images/step_23.jpg)
-
-### Registros de Windows: Seguridad
-Navega a `Registros de Windows` > `Seguridad` y filtra el registro actual:
-
-* **Event ID 4624:** Sirve para hacer auditoría de los inicios de sesión exitosos al sistema.
-  ![Filtro 4624](./images/step_25.jpg)
-* **Event ID 4625:** Nos sirve para ver la auditoría de los errores de una cuenta al intentar iniciar sesión.
-  ![Filtro 4625](./images/step_27.jpg)
-* **Event ID 4719:** Indica que alguien con privilegios de administrador modificó las reglas de qué cosas debe vigilar y registrar Windows. *(Si no hay registros bajo este ID, significa que no se han modificado dichas reglas de vigilancia)*.
-  ![Filtro 4719](./images/step_29.png)
+![Atributo Contraseña LAPS](images/verificacion_final.png)
