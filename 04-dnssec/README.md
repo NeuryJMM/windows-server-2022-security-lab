@@ -259,6 +259,13 @@ Resolve-DnsName -Name Neury0829.local -Type DNSKEY -Server 192.168.0.10 -DnssecO
 ```cmd
 gpresult /r /scope computer
 ```
+## Lo aprendido
+
+Esta práctica permitió trabajar los fundamentos necesarios para construir una infraestructura basada en Active Directory: instalación de Windows Server 2022 en un hipervisor, creación de un dominio y unión de un cliente Windows 10 al dominio.
+
+Durante el proceso se identificaron puntos críticos que conviene cuidar: eliminar el dispositivo Floppy de Easy Install para evitar errores de instalación, presionar una tecla a tiempo para arrancar desde la ISO, y configurar el DNS del cliente con la IP del controlador de dominio para que pueda resolver y unirse al dominio. También se comprendió la diferencia entre almacenar el disco virtual en un solo archivo o en varios, y por qué se recomienda asignar una IP estática a un controlador de dominio.
+
+---
 ## Demostración en video
 
 Esta práctica cuenta con una demostración en video donde se muestra el proceso completo en el laboratorio. Las capturas del procedimiento se encuentran en la carpeta `images/`.
