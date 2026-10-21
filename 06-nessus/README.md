@@ -261,6 +261,17 @@ Al finalizar la práctica, vuelve a dejar el servidor protegido:
 3. Volver a ejecutar un escaneo para comprobar el estado final.
 
 ---
+- [Solución de problemas](#solución-de-problemas-frecuentes)
+- ## Solución de problemas frecuentes
+
+| Problema | Causa probable | Solución |
+|---|---|---|
+| La opción **New Scan** no está disponible o el escaneo no inicia | Los *plugins* aún se están instalando | Esperar a que termine la instalación de los *plugins* y refrescar la página |
+| No carga `https://localhost:8834` | El servicio de Nessus no está iniciado, o el navegador bloquea el certificado | Iniciar el servicio **Tenable Nessus** desde `services.msc` y aceptar la advertencia del certificado autofirmado |
+| El escaneo no arroja resultados con credenciales | Usuario, contraseña o dominio incorrectos, o el equipo no permite el acceso remoto | Revisar las credenciales (`Neury0829.local`) y comprobar que SMB (puerto 445) y el servicio de Registro remoto estén accesibles |
+| Nessus no encuentra el host | La IP cambió (se asigna por DHCP) o el firewall bloquea el acceso | Verificar la IP con `ipconfig` y actualizar el campo *Targets* |
+| Los resultados no cambian tras aplicar las soluciones | Faltó reiniciar o quedan actualizaciones pendientes | Reiniciar el servidor, volver a **Windows Update** hasta que no queden pendientes y repetir el escaneo |
+| Aparecen hallazgos que parecen incorrectos | Posibles falsos positivos | Revisar el detalle del plugin, validarlo manualmente y documentarlo antes de remediar |
 
 ## Demostración en video
 
