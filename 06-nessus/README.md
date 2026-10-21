@@ -262,7 +262,13 @@ Al finalizar la práctica, vuelve a dejar el servidor protegido:
 
 ---
 
-<!-- Demostración en video: agregar aquí el enlace de YouTube de la práctica 06 cuando esté disponible -->
+## Demostración en video
+
+Esta práctica cuenta con una demostración en video donde se muestra el proceso completo en el laboratorio. Las capturas del procedimiento se encuentran en la carpeta `images/`.
+
+**Video de la práctica:** [Ver demostración en YouTube](https://www.youtube.com/watch?v=RSNTT5_cnQs)
+
+---
 
 ## Lo aprendido
 
